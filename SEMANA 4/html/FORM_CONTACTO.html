@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO HTML</title>
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+<body>
+    <header>
+        <img src="../img/incap.jpeg" alt=""height="100" width="100">
+        <h1>FORMULARIO Y LISTA</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>productos</li>
+            <li>servicios</li>
+            <li>contacto</li>
+        </ul>
+    </nav>
+<section>
+        <form action="datos.php" method="post">
+            <!-- seccion de ingreso de nombre completo -->
+            <label for="">Nombre Completo</label>
+            <input type="text" name="nombre" placeholder="ingrese su nombre" required> 
+            <br><br>
+            <hr>
+            <!-- seccion de ingreso e-mail -->
+            <label for="">E-mail</label>
+            <input type="email" name="email" placeholder="ingrese su correo electronico" required> 
+            <br><br> 
+            <hr>
+            <!-- seccion de ingreso contraseña-->
+            <label for="">contraseña</label>
+            <input type="password" name="contraseña" placeholder="ingrese su contraseña" required> 
+                <br><br>   
+                <hr>
+                <!-- seccion hobbies -->
+                <label for="">Selecciona tu Hobbies</label>
+                <br>
+                <input type="checkbox">cine <br>
+                <input type="checkbox">lectura <br>
+                <input type="checkbox">deporte <br>
+                <br>
+                <hr>
+                <!-- seccion estado civil -->
+                <label for="">Estasdo Civil</label> <br>
+                <input type="radio" name="estcivil">casado(a) <br>
+                <input type="radio" name="estcivil">soltero(a) <br>
+                <input type="radio" name="estcivil">viudo(a) <br>
+                <br><br>
+                <hr>
+                <!--SECCION PROGRAMAS TECNICOS -->
+                <label for="">PROGRAMAS TECNICOS</label>
+                <select name="" id="">
+                    <option value="">selecionar programas..</option>
+                    <option value="">Sistemas </option>
+                    <option value="">Diseño Grafico</option>
+                    <option value="">Contabilidad </option>
+                </select>
+                <br><br>
+                <hr>
+                <!-- SECCION COMENTARIO -->
+                <label for="">COMENTARIO</label>
+                <textarea name="" id="" cols="40" rows="5"></textarea>
+                <br><br>
+                <!-- seccion botones -->
+                <button type="submit">ENVIAR</button>
+                <button type="reset">CANCELAR</button>
+            </form>
+        </section>
+        <!-- SECCION PIE DE PAGINA -->
+        <footer>
+            <p>Derechos Reservados: &copy;2023&#64;Santis</p>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+body{
+    background-color: rgba(255,255,255,0.6);
+    background-image: url(../img/futbol.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: luminosity;
+}
+header{
+    background-color: rgba(255,255,255,0.3);
+    border: 2px solid blue;
+    border-radius: 20px 20px 10px 10px;
+    display: flex;
+    flex-direction: row;/*alinear horizontal*/
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: bur(5px);
+}
+header img{
+    padding: 15px;/*separacion horizontal por medio de px*/ 
+}
+nav{
+    background-color: blue;
+    border: 2px solid green;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+
+}
+nav ul{
+    padding: 0;
+    margin: 0 1px;
+}
+nav ul li{
+    display: inline;
+    list-style: none;
+    margin: 0 5px;
+    font:bold 12px verdana;
+}
