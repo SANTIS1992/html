@@ -1,0 +1,111 @@
+body{
+    background-color: rgba(255,255,255,0.6);
+    background-image: url(../img/futbol.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: luminosity;
+}
+header{
+    background-color: rgba(255,255,255,0.3);
+    border: 2px solid blue;
+    border-radius: 20px 20px 10px 10px;
+    display: flex;
+    flex-direction: row;/*alinear horizontal*/
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: bur(5px);
+}
+header img{
+    padding: 15px;/*separacion horizontal por medio de px*/ 
+}
+nav{
+    background-color: blue;
+    border: 2px solid green;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+
+}
+nav ul{
+    padding: 0;
+    margin: 0 1px;
+}
+nav ul li{
+    display: inline;
+    list-style: none;
+    margin: 0 5px;
+    font:bold 12px verdana;
+}
+/* seccion de estilos para css3 para section*/
+section{
+    width: 40%;
+    border: 1px solid black;
+    padding: 10px 10px;
+    border-radius: 20x;
+    margin: 10px auto;
+    box-shadow: inset 0 0 10px purple ;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);/*efecto glass transparencia*/
+}
+form{
+    background-color: silver;
+    width: 70%;
+    border-radius: 20px;
+    margin: 10px auto;/*auto centrar horizontalmente*/
+    box-shadow: inset 0 0 purple;
+}
+fieldset{
+    border-style: none;
+}
+label{
+    font-size: 18px;
+    padding-left: 15px;
+}
+textarea{
+    resize: both;
+    max-height: 100px;
+}
+input:focus , textarea:focus{
+    border-color: rgb(20,0,255);
+    cursor: pointer;/*coloca una manito en input*/
+    box-shadow: inset 0 0 8px rgba(0, 29,255,0.6);
+    outline:0 none;
+}
+form button{
+    width: 40%;
+    margin: 15px 0px 20px 25px;
+    height: 40px;
+/*color fondo en degradadocircular*/
+    background: radial-gradient(teal,black);
+    border: 2px solid black;
+    color: purple;
+    border-radius: 15px 15px;
+}
+/*efecto hover: pasar mause por encima del boton*/
+form button:hover{
+    background: lightblue;
+    text-decoration: underline;
+    color: black;
+    outline: none;
+    border: 1px solid black;
+}
+form input , textarea{
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;/*para colocar bordes redondeados*/
+    color: black;
+    outline: none;/*para quitarle el borde alos input*/
+    border:1px solid black;
+}
+/*seccion de estilos css3 para footer*/
+footer{
+    font-size: 16px;
+    text-align: center;
+    color: rgba(31, 223, 98, 0.835);
+}
