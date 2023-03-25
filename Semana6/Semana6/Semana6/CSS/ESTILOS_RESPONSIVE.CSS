@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    max-height: 100%;/*para web responsive*/
+}
+body{
+    font-family: tahoma;
+    font-size: 18px;
+    background-image: url(../img/Image20230325075029.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+/* seccion maquetacion css header */
+#header{
+    background-color: lightsteelblue;
+    border: 2px solid blue;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;/*nombre asignado al contenededor header para css grid*/
+}
+/* seccion maquetacion nav css */
+ul{
+    padding: 0;
+    margin:0 1px;
+}
+li{
+    display: inline;/*en linea horizontal*/
+    list-style: none;/*quita viñetas puntos*/
+    margin:0 5px;
+    font:bold 12px verdana;
+}
+a{
+    color: white;
+    text-decoration: none;/*quita subrayado hipervinculos*/
+}
+/* seccion de barra de navegacion  */
+#menu{
+    grid-area:nav;/*nombre asignado al contenededor nav  para css grid*/
+    background-color: blue;
+    border:2px solid yellowgreen;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;/*colocar los elementos del contenedor a todo lo ancho*/
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+/* estilos buscador web  */
+.buscarbox input{
+    height: 25px;
+    width: 0;
+    padding: 0;
+    border-radius: 40px;
+    border: 0;
+    padding-right: 50px;
+    transition: 0.08s ease;/*para aplicar animacion en demora=ease*/
+}
+.buscarbox input:hover{
+    width: 150px;
+    padding-left: 10px;
+    outline: none;/*este evento sucede cuando se pasa el mouse por encima del campo*/
+    }
+    #main{
+        grid-area: main;/*nombre asignado al contenededor main para css grid*/
+        background-color: rgba(255,255,255,0.6);
+        backdrop-filter: blur(5px);/*efecto glass difusion colores */
+        max-width: 100%;
+        height: auto;
+    }
+    figure{
+        display: inline;
+        margin: 45px;
+        padding: 5px;
+    }
+    .programa{
+        display: inline-block;
+        margin: 5px;
+        padding: 5px;
+        width: 45%;/*ancho relativo %*/
+        height: 200px;position: relative;
+        border: 1px solid black;
+        border-radius: 15px;
+
+        }
+    /* seccion maquetacion sidebar */
+    #sidebar{
+        grid-area: sidebar;/*nombre asignado al contenededor sidebar para css grid*/
+        display: flex;
+        flex-direction: column;/*colocar elementos en forma de columnas*/
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255,255,255,0.6);
+        backdrop-filter: blur(5px);
+    }
+    iframe{
+        max-width: 100%;
+        height: auto;
+    }
+    /* seccion maquetcion footer */
+    #footer{
+        grid-area: footer;/*nombre asignado al contenededor footer para css grid*/
+        padding-top: 20px;
+        border: 2px solid green;
+        border-radius: 20px;
+        clear: both;/*elimina los float de elementos*/
+        background-color: rgba(255,255,255,0.6);
+        backdrop-filter: blur(5px);
+    }
+    /* seccion de redes sociales  */
+    #redes a{
+        padding: 5px;
+        margin: 0;
+    }
+    #redes a i:hover{
+        transform: scale(1.5);/*agrandar iconos de redes sociales*/
+    }
+    /* seccion de estilos para iconos fontawesome */
+    i[class^="fa"]{
+        color: grey;
+        font-size: 18px;
+        /*busca todas las etiquetas <i> cuya clase comienza por fa */
+    }
+    i[class^="fab"]{
+        color: grey;
+        font-size: 30px;
+        border: 1px solid transparent;
+        margin: 0;
+        /*busca todas las etiquetas <i> cuya clase comienza por fab */
+    }
+    /* seccion estilos icono hamburguesa */
+    .fa-bars{
+        font-size: 30px !important;/*para dar exclusividad al estilo*/
+        color: black !important;
+    }
+    .openmenu{
+        display: none;/*ocultar elemento*/
+        cursor: pointer;/*colorcar una manito de cursor*/
+        font-size: 24px;
+    }
+    /* **************************************************** */
+    /* seccion de definicion de plantillas con css grid */
+    /* vista pc 3 columnas */
+    #grid-container{
+        text-align: center;
+        box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.75);
+    }
+    #grid-container{
+        display: grid;/*para manejar contenedores como estilo rejillas*/
+        grid-gap:10px;
+        grid-template:
+        "header  header  header "150px
+        "nav nav nav "  50px
+        "main main sidebar"  300px
+        "main main sidebar"  300px
+        "main main sidebar"  250px
+        "footer footer footer" 150px /
+        1250px  350px  250px;
+    }
+    /* seccion vista tables 2 columnas  */
+    @media ( max-width:1024px){
+        #grid-container{
+            grid-template:
+            "header header" 170px
+            "nav main" 800px
+            "nav main" 700px
+            "sidebar sidebar" 650px
+            "footer footer" 100px /
+            250px 450px;
+            font-size: 75%;
+        }
+        #menu{
+            background-color: blue;
+            border-radius: 22px;
+            display: block;
+            padding: 45px;
+            margin: 40px;
+            height: auto;
+            text-align: center;
+        }
+    }
+        
+    
+
